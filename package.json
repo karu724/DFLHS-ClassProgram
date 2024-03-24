@@ -1,0 +1,58 @@
+{
+  "author": "Ki Sung Hoon",
+  "bugs": {
+    "url": "https://github.com/DwSungHun"
+  },
+  "dependencies": {
+    "axios": "^1.6.8",
+    "child_process": "^1.0.2",
+    "dotenv-defaults": "^5.0.2",
+    "electron-is-dev": "^3.0.1",
+    "electron-log": "^5.1.2",
+    "electron-updater": "^6.1.8",
+    "node-schedule": "^2.1.1",
+    "os": "^0.1.2"
+  },
+  "description": "",
+  "devDependencies": {
+    "electron": "^29.1.5",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "productName": "dflhs-classprogram",
+    "asar": true,
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": true
+    },
+    "icon": "app/assets/media/icon.png"
+  },
+  "homepage": "https://github.com/TheNolle/ElectronJS-Template-App#readme",
+  "license": "MIT",
+  "main": "index.js",
+  "name": "classprogram",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder",
+    "build": "electron-builder build --win --publish never",
+    "deploy": "electron-builder build --win --publish always",
+    "dist": "electron-builder build",
+    "dist:win": "npm run dist -- -w",
+    "dist:mac": "npm run dist -- -m",
+    "dist:linux": "npm run dist -- -l"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DwSunghun/DFLHS-ClassProgram.git"
+  },
+  "version": "1.2.3",
+  "publish": [
+    {
+      "provider": "github",
+      "owner": "DwSunghun",
+      "repo": "DFLHS-ClassProgram"
+    }
+  ]
+}
